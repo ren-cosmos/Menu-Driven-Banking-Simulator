@@ -28,7 +28,7 @@ public class SavingsAccount extends Account{
     }
     
     public int getAccountNumber(){
-        return this.acc_number;
+        return super.getAccountNumber();
     }
 
     // Mutator Method
@@ -40,7 +40,7 @@ public class SavingsAccount extends Account{
     public void deposit(double amount){
         if(amount > 0){
             this.balance += amount;
-            System.out.printf("Amount Deposited: %.2f%n: ", amount);
+            System.out.printf("Amount Deposited: %.2f%n", amount);
             System.out.printf("Current Balance: %.2f%n", this.balance);
         }
         else{

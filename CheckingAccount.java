@@ -28,14 +28,14 @@ public class CheckingAccount extends Account{
     }
     
     public int getAccountNumber(){
-        return this.acc_number;
+        return super.getAccountNumber(); // using getAccountNumber() method from the super class. Using this.getAccountNumber() results in recursive loop
     }
 
     // Abstract Methods
     public void deposit(double amount){
         if(amount > 0){
             this.balance += amount;
-            System.out.printf("Amount Deposited: %.2f%n: ", amount);
+            System.out.printf("Amount Deposited: %.2f%n", amount);
 
             // Apply Transaction Fee
             this.balance -= trans_fee;

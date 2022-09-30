@@ -6,7 +6,7 @@ public abstract class Account{
 
     // Fields/Attributes
     protected double balance;
-    protected int acc_number;
+    private int acc_number;
 
     // Contructor 1
     public Account(){
